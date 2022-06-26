@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Stat.io</string>
+
+    <string name="menu_opcja_strona_glowna">Strona główna</string>
+    <string name="menu_opcja_statystyki">Statystyki</string>
+    <string name="menu_opcja_kalkulator">Kalkulator</string>
+
+</resources>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+
+    <TextView
+        android:id="@+id/wybranyPojazdNaglowek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WYBRANE AUTO"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/wybranyPojazdNazwa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="BRAK"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wybranyPojazdNaglowek" />
+
+    <TextView
+        android:id="@+id/wybranyPojazdPrzebieg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wybranyPojazdNazwa" />
+
+    <Button
+        android:id="@+id/buttonNowyPojazd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="@+id/wybranyPojazdNazwa"
+        app:layout_constraintStart_toStartOf="@+id/wybranyPojazdNazwa"
+        app:layout_constraintTop_toBottomOf="@+id/wybranyPojazdPrzebieg" />
+
+    <TextView
+        android:id="@+id/nowyPrzebiegNaglowek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="64dp"
+        android:text="Nowy przebieg [km]"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wybranyPojazdPrzebieg" />
+
+    <EditText
+        android:id="@+id/nowyPrzebiegWejscie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@+id/nowyPrzebiegNaglowek"
+        app:layout_constraintTop_toBottomOf="@+id/nowyPrzebiegNaglowek" />
+
+    <TextView
+        android:id="@+id/kosztZatankowanegoPaliwaNaglowek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Koszt tankowania [zł]"
+        app:layout_constraintStart_toStartOf="@+id/nowyPrzebiegNaglowek"
+        app:layout_constraintTop_toBottomOf="@+id/nowyPrzebiegWejscie" />
+
+    <EditText
+        android:id="@+id/kosztZatankowanegoPaliwaWejscie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="numberDecimal"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@+id/kosztZatankowanegoPaliwaNaglowek"
+        app:layout_constraintTop_toBottomOf="@+id/kosztZatankowanegoPaliwaNaglowek" />
+
+    <TextView
+        android:id="@+id/zatankowanePaliwoNaglowek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Zatankowane paliwo [L]"
+        app:layout_constraintStart_toStartOf="@+id/kosztZatankowanegoPaliwaNaglowek"
+        app:layout_constraintTop_toBottomOf="@+id/kosztZatankowanegoPaliwaWejscie" />
+
+    <EditText
+        android:id="@+id/zatankowanePaliwoWejscie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="numberDecimal"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@+id/zatankowanePaliwoNaglowek"
+        app:layout_constraintTop_toBottomOf="@+id/zatankowanePaliwoNaglowek" />
+
+    <TextView
+        android:id="@+id/cenaLitraPaliwaNaglowek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:text="Cena paliwa [zł/L]"
+        app:layout_constraintStart_toEndOf="@+id/zatankowanePaliwoNaglowek"
+        app:layout_constraintTop_toTopOf="@+id/zatankowanePaliwoNaglowek" />
+
+    <EditText
+        android:id="@+id/cenaLitraPaliwaWejscie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="numberDecimal"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@+id/cenaLitraPaliwaNaglowek"
+        app:layout_constraintTop_toBottomOf="@+id/cenaLitraPaliwaNaglowek" />
+
+    <TextView
+        android:id="@+id/dataTankowaniaNaglowek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Data tankowania (DD/MM/YYYY)"
+        app:layout_constraintStart_toStartOf="@+id/zatankowanePaliwoNaglowek"
+        app:layout_constraintTop_toBottomOf="@+id/zatankowanePaliwoWejscie" />
+
+    <EditText
+        android:id="@+id/dataTankowaniaWejscie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="@+id/dataTankowaniaNaglowek"
+        app:layout_constraintTop_toBottomOf="@+id/dataTankowaniaNaglowek" />
+
+    <Button
+        android:id="@+id/buttonDodajTankowanie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Dodaj tankowanie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dataTankowaniaWejscie" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="2dp"
+        android:layout_height="64dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toStartOf="@+id/cenaLitraPaliwaNaglowek"
+        app:layout_constraintStart_toEndOf="@+id/zatankowanePaliwoNaglowek"
+        app:layout_constraintTop_toTopOf="@+id/zatankowanePaliwoNaglowek"
+        app:layout_constraintBottom_toBottomOf="@+id/zatankowanePaliwoWejscie" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

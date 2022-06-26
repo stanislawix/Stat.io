@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DodawanieAutaActivity">
+
+    <TextView
+        android:id="@+id/przebiegNaglowek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Przebieg [km]"
+        app:layout_constraintStart_toStartOf="@+id/nrRejestracyjnyWejscie"
+        app:layout_constraintTop_toBottomOf="@+id/nrRejestracyjnyWejscie" />
+
+    <TextView
+        android:id="@+id/pojemnoscBakuNaglowek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Pojemność baku [L]"
+        app:layout_constraintStart_toStartOf="@+id/przebiegNaglowek"
+        app:layout_constraintTop_toBottomOf="@+id/przebiegWejscie" />
+
+    <TextView
+        android:id="@+id/rokProdukcjiNaglowek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rok produkcji"
+        app:layout_constraintBottom_toTopOf="@+id/rokProdukcjiWejscie"
+        app:layout_constraintStart_toStartOf="@+id/rokProdukcjiWejscie" />
+
+    <EditText
+        android:id="@+id/nrRejestracyjnyWejscie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="BSK1234"
+        app:layout_constraintStart_toStartOf="@+id/nrRejestracyjnyNaglowek"
+        app:layout_constraintTop_toBottomOf="@+id/nrRejestracyjnyNaglowek" />
+
+    <TextView
+        android:id="@+id/nrRejestracyjnyNaglowek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Rejestracja"
+        app:layout_constraintStart_toStartOf="@+id/modelNaglowek"
+        app:layout_constraintTop_toBottomOf="@+id/modelWejscie" />
+
+    <EditText
+        android:id="@+id/modelWejscie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Insignia"
+        app:layout_constraintStart_toStartOf="@+id/modelNaglowek"
+        app:layout_constraintTop_toBottomOf="@+id/modelNaglowek" />
+
+    <TextView
+        android:id="@+id/modelNaglowek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Model auta"
+        app:layout_constraintStart_toStartOf="@+id/markaNaglowek"
+        app:layout_constraintTop_toBottomOf="@+id/markaWejscie" />
+
+    <EditText
+        android:id="@+id/markaWejscie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Opel"
+        app:layout_constraintStart_toStartOf="@+id/markaNaglowek"
+        app:layout_constraintTop_toBottomOf="@+id/markaNaglowek" />
+
+    <TextView
+        android:id="@+id/markaNaglowek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Marka"
+        app:layout_constraintStart_toStartOf="@+id/nazwaNaglowek"
+        app:layout_constraintTop_toBottomOf="@+id/nazwaWejscie" />
+
+    <TextView
+        android:id="@+id/nazwaNaglowek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="64dp"
+        android:text="Wyświetlana nazwa auta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/nazwaWejscie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Insignia"
+        app:layout_constraintStart_toStartOf="@+id/nazwaNaglowek"
+        app:layout_constraintTop_toBottomOf="@+id/nazwaNaglowek" />
+
+    <EditText
+        android:id="@+id/przebiegWejscie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:inputType="number"
+        android:text="12345678"
+        app:layout_constraintStart_toStartOf="@+id/przebiegNaglowek"
+        app:layout_constraintTop_toBottomOf="@+id/przebiegNaglowek" />
+
+    <EditText
+        android:id="@+id/rokProdukcjiWejscie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:ems="4"
+        android:inputType="date"
+        android:text="2009"
+        app:layout_constraintStart_toEndOf="@+id/przebiegWejscie"
+        app:layout_constraintTop_toTopOf="@+id/przebiegWejscie" />
+
+    <EditText
+        android:id="@+id/pojemnoscBakuWejscie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="4"
+        android:inputType="numberDecimal"
+        android:text="48.5"
+        app:layout_constraintStart_toStartOf="@+id/pojemnoscBakuNaglowek"
+        app:layout_constraintTop_toBottomOf="@+id/pojemnoscBakuNaglowek" />
+
+    <Button
+        android:id="@+id/buttonDodajPojazd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Dodaj auto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pojemnoscBakuWejscie" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
